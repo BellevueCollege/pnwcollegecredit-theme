@@ -1,0 +1,690 @@
+/*
+ Theme Name:   TechPrep CC (TinyFramework Child)
+ Theme URI:    https://github.com/BellevueCollege/techprepcc-theme/
+ Description:  Tiny Framework Child Theme for TechPrepCC.org
+ Author:       Bellevue College ITS
+ Author URI:   http://www.bellevuecollege.edu
+ Template:     tiny-framework
+ Version:      0.0.0.1
+ License:      GNU General Public License v3
+ License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+ Tags:         light, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  techprepcc
+*/
+@import "flexboxgrid";
+/*
+ * Out of the box 'switches'
+ *
+ * Options provided by Tiny Framework to modify display and functionality.
+ *
+ */
+
+body, 
+body .site,
+body.custom-font-enabled {
+	/* Improving font fallback in Linux */
+	background: #fff;
+	box-shadow:none;
+	color: #000;
+	font-size: 16px;	
+	font-family:'Open Sans', 
+		'Raleway',
+		sans-serif;
+	margin: auto;
+	margin-top: 3em;
+	max-width: 100%;
+	line-height: 1.7;
+	padding: 0;
+    text-rendering: optimizeLegibility;
+}
+
+a:active, 
+a:visited{
+	color:#000;	
+}
+a,
+a:focus, 
+a:hover { 	
+	border-bottom:0;
+	color: #539241;
+}
+/* Button Styling */
+button.btn, input[type="button"],
+input[type="reset"],
+input[type="submit"]:visited,
+input[type="button"]:visited {
+	background: none;
+	-moz-border-radius: 0;
+    -webkit-border-radius: 0;
+	border-radius: 0;
+	color: #292929;	
+	display: inline-block;
+	font-weight: 700;
+	padding: 6px 12px;	
+}
+button:hover, .btn:hover  {
+	border: 3px solid #292929;
+	background: none;
+	background-color: none;
+	color: #292929;
+}
+btn,
+button.btn, input[type="button"]:active,
+input[type="button"], input[type="reset"],
+input[type="submit"], button,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {	
+	background: #292929;
+	border: 3px solid #292929;
+	-moz-border-radius: 0;
+    -webkit-border-radius: 0;
+	border-radius: 0;
+	color: #fff;
+}
+
+/* Home Page Buttons */
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	margin: 0 1em 0 1em;
+}
+.buttons div {
+	align-self:center;
+	text-align: center;
+}
+
+img, 
+image, 
+a img,
+a image,
+img.image {
+	border: none;
+	border-radius: 0;
+	--webkit-border-radius: 0;
+	--moz-border-radius: 0;
+	box-shadow: none;
+	border-bottom: 0;
+	text-decoration: none;
+} 
+h1, h2 {
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 300;
+}
+h4 {
+	font-weight: 300;
+	font-size: .85rem;
+	font-family: inherit;
+}
+
+p {
+    margin: 0 0 10px;
+}
+/*  Add PDF image to title */
+#post-6 h2 {
+	background: #292929 
+		url(img/pdficon_large.gif) 
+		center right no-repeat;
+	border: .125em solid #292929;
+	color: #fff;
+	padding:0 0 0 0.5em;		
+}
+#masthead {
+	background-color: rgba(0, 0, 0,0.5);
+	display: block;
+	height: auto;	
+	padding-top: 3.5em;	
+	padding-bottom: 4.25em;
+	margin: auto;
+	margin-top: 1rem;
+	width: 100%;	
+}
+.scroll-link {
+	border-bottom: 0;
+    display: inline-block;
+	font-size: 3em;
+	font-weight: 700;
+    text-rendering: auto;
+	-webkit-font-smoothing: antialiased;			
+}
+.site-content {
+	color: #000;
+	font-family:inherit;
+	line-height: 2em;
+	margin: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right:15px;
+	padding-left: 15px;	
+	width: 95%;
+}
+.site-branding {
+	align-items: center;
+	align-self: center;  
+	background: rgba(255, 255, 255, 0.7);
+	font-size: 1em;
+    justify-content: center;
+    margin: auto;
+	padding: .5em;
+	width: 50%;
+}
+.site-logo-link,
+.custom-logo-link {			
+	display: block;
+	float: none;
+	padding-top: .25em;
+}
+.site-header a {
+	border-bottom:none;
+	margin: 0;
+}
+.site-header .site-title a:hover {
+	color:#258c5d;
+	text-decoration: none;	
+}
+.site-header .site-title,
+.site-header .site-title a {
+	clear: none;
+	display: inline;
+}
+.site-header .site-description,
+.site-header .site-title {
+	font-weight: normal;
+}
+.sidebar .widget-area .widget-title {
+	color: #fff;
+	font-family: inherit;
+	font-size: 0.9rem;
+	text-align: right;
+}
+/* Hide Search */
+.search-field {
+	display: none;
+}
+.site-header .search-form [type="submit"] {
+	display: none;
+}
+/* Light search icon */
+.site-header .search-form [type="search"],
+.site-header .search-form [type="text"] {
+	background-image: url(img/icon-search-white.png);
+}
+.site-header .menu-toggle {
+    background: #292929;
+}
+.site-header .menu-toggle { 
+    font-weight: normal;
+    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
+    width: 100%;
+}
+#site-title {
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 3px 3px 0 0 rgba(0,0,0, 0.25);
+	color: #fff;
+	display:table-cell;
+	display: table-row;
+	float:left;
+	font-size:1rem;
+	font-weight: 600;
+	height: 2.25rem;
+	letter-spacing: 1px;
+	line-height:2.25rem;
+	padding: 0 1.5rem;
+	padding-top:0;
+	position: fixed;
+	right: -209px;
+	transform: rotateZ(-90deg);
+	text-decoration:none;
+	text-shadow: 1px 1px 0 rbga(0,0,0,0.25);
+	text-transform: uppercase;
+	top:50%;
+	vertical-align:middle;
+	z-index:9999;
+}
+#site-title-wrapper {
+	float: none;
+	font-size: 0.9rem;
+/*	padding: 12px 0 12px 12px;
+	padding: 0.75rem 0 0.75rem 0.75rem;	*/
+	margin: auto;
+}
+.list-view footer.entry-meta {
+	display: none;
+}
+.format-link footer.entry-meta,
+.format-status footer.entry-meta,
+.singular footer.entry-meta {
+	display: block;
+}
+#techprepcc-logo {
+	float: left;
+	max-width: 100%;
+	margin-top: 1em;
+}
+.widget-title {
+	border-bottom:0;
+	color: #292929;
+	font-size: 1.5rem;
+	text-transform: none;
+}
+/* Hide top menu search in child themes for the mobile menu */
+.menu-item.menu-item-search {
+	display: none;
+}
+/* Better spacing for improved font size */
+.menu-item.menu-item-search {
+	margin: 0.6rem 0 0 0;
+}
+.main-navigation {
+	background-color: #292929;
+	height: 42px;	
+	position: fixed;
+	top:0px;
+	margin: auto;
+}
+.main-navigation .current_page_item > a {
+	border-bottom: solid 3px 
+		rgba(255,255,255, 1);
+	line-height: 2;
+	text-decoration: none;
+}
+.main-navigation ul.nav-menu,
+.main-navigation div.nav-menu > ul.li {
+	text-align: center;
+}
+.main-navigation ul.nav-menu, 
+.main-navigation div.nav-menu > ul {
+    background: #292929;
+	border-radius:0;
+	--webkit-border-radius: 0;
+	--moz-border-radius: 0;
+}
+.header-image {
+	box-shadow: 0;
+	width: 100%;
+}
+.avatar, .comment-content img, 
+.entry-content img,
+img.header-image,
+img.wp-post-image,
+.widget img {
+	border-radius: 0;
+	box-shadow: none;
+}
+.entry-content h3 {
+	color: #fff;
+	background: #292929 url("img/leaf.jpg") center right no-repeat;
+	padding: .125em .5em .25em .75em;	
+}
+.entry-content h3 a:visited,
+.entry-content h3 a {
+	color: #fff;
+	border-bottom: 1px dotted #fff;	
+	text-decoration: none;
+}
+.meta-separator {
+	display: none;
+}
+#footer-widgets a {
+	color: #000;
+}
+#footer-widgets li {
+	text-decoration: none;
+}
+#footer-widget-left {
+	display:flex;
+	justify-content: center;
+}
+#footer-widgets.three #footer-widget-left {
+	display: flex;
+	flex-wrap: wrap;	
+	padding:5px;
+	margin: 10px auto;
+}
+#footer-widget-left .widget_media_image img{
+	justify-content: center;	
+	max-height: 5em;
+	width: auto;
+}
+#footer-widget-left section {	
+	align-self: center;	
+	text-align:center;  
+	margin:0;
+}
+#footer-widget-middle a:hover {
+	color:#258c5d;	
+	text-decoration: none;
+}
+.widgettitle {
+	color: #fff;
+	font-family: inherit;
+	font-size: 1em;	
+}
+
+.widget-area .widget,
+.widget-area .widget .textwidget,
+.widget-area .widget .textwidget a{
+	color: #000;
+	font-size: 15px;
+}
+.widget-area .widget .textwidget a:hover {
+	color:#258c5d;
+	text-decoration: none;
+}
+#site-description {
+	color: #292929;
+	font-size: 1rem;
+	font-weight: 600;
+	float: none;
+	text-align: center;		
+}
+.page-home .entry-title {
+	display: none;
+}
+#footer-widget-right{
+	display: none;
+}
+.widget-area 
+.current_page_item > a {
+	border-bottom: solid 3px rgba(0, 7, 16, 0.5);	
+	text-decoration: none;
+}
+#text-3 .textwidget h4 {
+	text-align: left;
+}
+.site-footer {
+	background:#f2f2f2;
+	bottom: 0;
+	padding-bottom: 0;
+	max-width: 100%;
+	width: 100%;				
+}
+.site-footer a:focus, 
+.site-footer a:hover {
+	color:#258c5d;
+}
+#site-footer {
+	@extend .col;
+    border-top:0;	
+	float: none;
+}
+#site-footer a, .site-footer img {
+	border-bottom: 0;
+}
+#footer-widgets.three #footer-widget-left, 
+#footer-widgets.three #footer-widget-middle { 
+	height:auto;
+}
+.widget 
+.widget_media_image {
+ 	display: block;
+}
+#footer-widgets.three #footer-widget-left {	
+	@extend .row;	
+	width: 100%;
+}
+#footer-widget-left .widget_media_image {
+	 @extend .col-md;
+}
+#copyright-widget,
+#copyright-widget .widget, 
+#copyright-widget .widget div {
+	display: block; 
+	float: none;
+	text-align:center;
+	margin: auto;
+	width: 100%;	
+}
+#copyright-widget a {
+	font-weight: 700;	
+	text-decoration:none;
+}
+.site-info {
+	float: none;
+	margin: auto;
+	width: 100%;
+}
+.entry-header.entry-title {
+	display: none;
+}
+.entry-header .entry-title {
+	color: #292929;
+	font-size: 2.44141rem;
+	font-weight: light;
+}
+#site-admin-link {
+	display: none;
+}
+
+/**
+* #.# Mobile First Method
+*
+* Media Queries.
+*/
+
+@media screen and (min-width: 783px) {
+	/* Show top menu search in child themes for the full menu */
+	.menu-item.menu-item-search {
+		display: inline;
+	}
+	/* Update main menu color */
+	.main-navigation ul.nav-menu,
+	.main-navigation div.nav-menu > ul.li {
+		padding: .1em 1em;
+	}
+	.main-navigation div.nav-menu > li {
+		float:left;		
+		padding: 0;
+	}
+	.main-navigation ul.nav-menu a {
+		color: #fff;
+		font-size: 1.2em;		
+		text-transform: none;
+	}
+	.main-navigation li ul li a {
+		background: #000;
+	}
+	.main-navigation li a:hover, 
+	.main-navigation li, .main-navigation li,
+	.main-navigation li a:visited {
+		border-bottom: 0;
+		line-height:2;
+		text-decoration: none;		
+	}
+	.main-navigation li a:active,
+	.main-navigation li a:hover,
+	.main-navigation li a:focus {	
+		border-bottom: 3px solid
+			rgba(255,255,255, 0.7);
+		line-height:2;
+		text-decoration: none;		
+	}
+}
+/* Custom, iPhone Retina */ 
+@media  (min-width : 320px) {
+	#footer-widget-middle {		
+		margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start; 
+		padding:2em;		
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: center;		
+		padding:2em; 
+		margin:0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#footer-widgets.three #footer-widget-middle {
+		align-items: flex-start;
+		align-self:flex-end;	
+		display: flex;			
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+	#footer-widget-middle {
+		margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start;		
+		padding:2em; 
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: center; 		
+		padding:2em;
+		margin:0;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {	
+	#footer-widgets.three #footer-widget-middle {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;		
+	}
+	#footer-widget-middle {
+		margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start;		
+		padding:2em; 
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: center; 		
+		padding:2em;
+		margin:0;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	#footer-widget-middle {
+		width:100%;
+	}
+}
+/* Menu mobile */
+@media screen and (max-width: 782px) {
+	#footer-widgets.three #footer-widget-middle {
+		align-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;		
+	}
+	#footer-widget-middle {
+		margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start;		
+		padding:1em; 
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: center; 		
+		padding:2em;
+		margin:0;
+	}
+	.main-navigation.toggled ul > .current-menu-item > a, 
+	.main-navigation.toggled ul > .current_page_item > a {
+		background: #292929;
+	}	
+}
+	/* Custom break for logo on header */
+@media (min-width: 432px) and (max-width: 782px) {
+	.site-branding a, {
+		text-align: center;
+	 }
+}
+@media (min-width: 400px) and (max-width: 589px) {	
+	#footer-widget-middle {
+		margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start;		
+		padding:2em; 
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: flex-start;		
+		padding:2em; 
+		margin:0;
+	}
+}
+@media (min-width: 590px) and (max-width: 767px) {
+	/* Landscape phones and down */
+	#footer-widget-left .widget_media_image img {
+		padding: 0.25em;
+	}
+	#footer-widget-middle {
+		align-self: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		float: right;
+		margin:0;		
+	}
+	#footer-widget-middle {
+		margin: auto;
+	}
+}
+@media (min-width: 992px) {
+	/* landscape and desktops */
+	#footer-widget-middle {
+			margin: auto;
+	}
+	#footer-widget-middle section {
+		align-self: flex-start;		
+		padding:1em; 
+		margin:0;
+	}
+	#footer-widget-left {
+		margin: auto;
+	}
+	#footer-widget-left section {
+		align-self: flex-start;		
+		padding:1em; 
+		margin:0;
+	}
+	.main-navigation.toggled ul > .current-menu-item > a, 
+	.main-navigation.toggled ul > .current_page_item > a {
+		background: #292929;
+	}	
+}
+/* 12.0 Footer */
+/* 15.1 Minimum width of 770 pixels */
+@media screen and (min-width: 770px) {
+	body .site {
+		max-width: 100%;
+	}
+	/* Compatibility for older IE browsers */
+	.ie body .site {
+		max-width: 100%;
+	}
+}
+/** End Media Queries **/
