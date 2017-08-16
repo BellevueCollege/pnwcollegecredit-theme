@@ -80,14 +80,3 @@ function techprepcc_header() {
 }
 
 add_action('wp_enqueue_scripts', 'techprepcc_header');
-
-/**
-* Exclude Category
-*/
-
-function exclude_category( $query ) {
-	if( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-6' );
-	}
-}
-add_action( 'pre_get_posts', 'exclude_category' );
