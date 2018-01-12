@@ -1,5 +1,5 @@
 {
-  "name": "techprepcc-theme",
+  "name": "pnwcollegecredit-theme",
   "version": "0.0.1",
   "description": "tehcprepcc Child Theme",
   "main": " ",
@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+http://github.com/BellevueCollege/techprepcc-theme/"
+    "url": "git+http://github.com/BellevueCollege/pnwcollegecredit-theme/"
   },
   "author": "Bellevue College ITS",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "http://github.com/BellevueCollege/techprepcc-theme/issues"
+    "url": "http://github.com/BellevueCollege/pnwcollegecredit-theme/issues"
   },
-  "homepage": "http://github.com/BellevueCollege/techprepcc-theme#readme"
+  "homepage": "http://github.com/BellevueCollege/pnwcollegecredit-theme#readme"
 }
