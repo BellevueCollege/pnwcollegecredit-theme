@@ -5,7 +5,7 @@
  Author:       Bellevue College ITS
  Author URI:   http://www.bellevuecollege.edu
  Template:     tiny-framework
- Version:      0.0.0.1
+ Version:      0.0.0.4
  GitHub Theme URI: bellevuecollege/pnwcollegecredit-theme
  License:      GNU General Public License v3
  License URI:  http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,6 +13,12 @@
  Text Domain:  pnwcollegecredit
 */
 @import "flexboxgrid";
+
+$max-width: 1280px;
+
+$width: calc(100% - 6em);
+$width-sm: calc(100% - 1em);
+
 /*
  * Out of the box 'switches'
  *
@@ -73,7 +79,6 @@ input[type="submit"]:focus,
 	color: #fff;
 	font-weight: 700;
 	text-decoration: none;
-	width:100%;
 }
 
 /* Home Page Buttons alignment */
@@ -101,7 +106,7 @@ img.image {
 	text-decoration: none;
 }
 p {
-    margin: 0 0 10px;
+	margin: 0 0 10px;
 }
 /*  Add PDF image to title */
 #post-6 h2 {
@@ -113,12 +118,14 @@ p {
 	padding:0 0 0 0.5em;		
 }
 /* Site branding header image styling avoid overlapping */
-img.header-image {display:none;}
+img.header-image {
+	display:none;
+}
 #masthead {
  	height: auto;	
  	padding-top: 3.5em;	
  	padding-bottom: 4.25em;
-	margin-top: 1rem;
+	margin-top: 0;
 }
 /* Scroll to top */
 .scroll-link {
@@ -127,34 +134,33 @@ img.header-image {display:none;}
 }
 /* Reduce width site content */
 .site-content {
-	line-height: 2em;
 	margin: auto;
-	padding-right:15px;
-	padding-left: 15px;	
-	width: 95%;
+	width: $width-sm;
+	max-width: $max-width;
 }
 /* Add background to image */
 .site-branding {
 	background: rgba(255, 255, 255, 0.7);
 	font-size: 1em;
-    margin: auto;
+	margin: auto;
 	padding: .5em;
-	width: 50%;
+
+	width: $width-sm;
+	max-width: $max-width;
+	text-align: center;
 }
 .site-logo-link,
-.custom-logo-link {			
+.custom-logo-link {
 	display: block;
 	float: none;
 	padding-top: .25em;
 	margin: 0;
 }
 /* Hide Search */
-.search-field {
+.search-box {
 	display: none;
 }
-.site-header .search-form [type="submit"] {
-	display: none;
-}
+
 /* Light search icon */
 .site-header .search-form [type="search"],
 .site-header .search-form [type="text"] {
@@ -173,6 +179,7 @@ img.header-image {display:none;}
 /* Site title custom header & wrapper */
 #site-title {
 	text-align:center;
+	display: none;
 }
 #site-description {
 	color: #292929;
@@ -203,10 +210,7 @@ img.header-image {display:none;}
 	font-size: 1.5rem;
 	text-transform: none;
 }
-/* Hide top menu search in child themes for the mobile menu */
-.menu-item.menu-item-search {
-	display: none;
-}
+
 /* Better spacing for improved font size */
 .menu-item.menu-item-search {
 	margin: 0.6rem 0 0 0;
@@ -247,19 +251,19 @@ img.wp-post-image,
 	box-shadow: none;
 }
 /* Add leaf to headers with links attributes */
-.entry-content h3 {
+.entry-content h2 {
 	color: #fff;
-	background: #292929 url("img/leaf.jpg") center right no-repeat;
-	padding: .125em .5em .25em .75em;	
+	/* background: #292929 url("img/leaf.jpg") center right no-repeat; */
+	padding: .125em 1.5em .25em .75em;	
+
+	a:visited,
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: #539241;
+	}
 }
-.entry-content h3 a:visited,
-.entry-content h3 a {
-	color: #fff;
- }
- .entry-content h3 a:hover {
-	 text-decoration: none;
-	 color: #539241;
- }
  /* Footer widgets styling and center for mobile display */
 #footer-widgets li {
 	text-decoration: none;
@@ -454,6 +458,11 @@ img.wp-post-image,
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.site-content,
+	.site-branding {
+		width: $width;
+		max-width: $max-width;
+	}
 	#footer-widgets.three #footer-widget-middle {
 		align-items: flex-start;
 		align-self:flex-end;	
