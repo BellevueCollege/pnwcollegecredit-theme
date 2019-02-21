@@ -6,17 +6,20 @@
   "browserslist": [
     "> 2% in US",
     "last 2 versions",
-    "Firefox ESR"
+    "Firefox ESR",
+    "not dead"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "natives": "^1.1.6"
+  },
   "devDependencies": {
     "flexboxgrid": "^6.3.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "~3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "~4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.1",
     "uglify-save-license": "^0.4.1"
   },
   "scripts": {
