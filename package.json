@@ -1,0 +1,38 @@
+{
+  "name": "pnwcollegecredit-theme",
+  "version": "0.0.1",
+  "description": "tehcprepcc Child Theme",
+  "main": " ",
+  "browserslist": [
+    "> 2% in US",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "dependencies": {
+    "natives": "^1.1.6"
+  },
+  "devDependencies": {
+    "flexboxgrid": "^6.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "~4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.1",
+    "uglify-save-license": "^0.4.1"
+  },
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://github.com/BellevueCollege/pnwcollegecredit-theme/"
+  },
+  "author": "Bellevue College ITS",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "http://github.com/BellevueCollege/pnwcollegecredit-theme/issues"
+  },
+  "homepage": "http://github.com/BellevueCollege/pnwcollegecredit-theme#readme"
+}
