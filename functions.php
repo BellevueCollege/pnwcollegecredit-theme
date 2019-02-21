@@ -58,9 +58,12 @@ add_action( 'template_redirect', 'tinyframework_mod_content_width' );
 * Move Header Image Css 
 */
 
+// Save same data about the theme into a variable
+
+
 function pnwcollegecredit_header() {
 	wp_enqueue_style(
-		'custom_style',
+		'pnwcc-style',
 		 get_stylesheet_directory_uri() . "/style.css",
 		 array(),
 		 '1.0.0',
@@ -76,7 +79,7 @@ function pnwcollegecredit_header() {
 			background-size: cover;
 		}";
 
-	wp_add_inline_style('custom_style', $custom_css);
+	wp_add_inline_style('pnwcc-style', $custom_css);
 }
 
 add_action('wp_enqueue_scripts', 'pnwcollegecredit_header');
