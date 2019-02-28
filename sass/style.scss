@@ -1,4 +1,4 @@
-/*
+/*!
  Theme Name:   PNW College Credit (TinyFramework Child)
  Theme URI:    https://github.com/BellevueCollege/pnwcollegecredit-theme/
  Description:  Tiny Framework Child Theme for pnwcollegecredit.org
@@ -419,22 +419,27 @@ img.wp-post-image,
 		font-size: 1.2em;		
 		text-transform: none;
 	}
+	.main-navigation li a {
+		margin-top: .5em;
+		line-height: 2;
+	}
 	.main-navigation li ul li a {
 		background: #000;
+		margin-top: 0;
 	}
+
 	.main-navigation li a:hover, 
 	.main-navigation li, .main-navigation li,
 	.main-navigation li a:visited {
 		border-bottom: 0;
-		line-height:2;
 		text-decoration: none;		
 	}
+
 	.main-navigation li a:active,
 	.main-navigation li a:hover,
-	.main-navigation li a:focus {	
-		border-bottom: 3px solid
-			rgba(255,255,255, 0.7);
-		line-height:2;
+	.main-navigation li a:focus {
+		 border-bottom: 3px solid
+		 	rgba(255,255,255, 0.7);
 		text-decoration: none;		
 	}
 }
@@ -556,7 +561,7 @@ img.wp-post-image,
 }
 	/* Custom break for logo on header */
 @media (min-width: 432px) and (max-width: 782px) {
-	.site-branding a, {
+	.site-branding a {
 		text-align: center;
 	 }
 }
