@@ -223,9 +223,13 @@ img.header-image {
 	top:0px;
 	margin: auto;
 }
-.main-navigation .current_page_item > a {
+
+.main-navigation li.current_page_item {
 	border-bottom: solid 3px 
 		rgba(255,255,255, 1);
+}
+
+.main-navigation li.current_page_item > a {
 	line-height: 2;
 	text-decoration: none;
 }
@@ -442,7 +446,12 @@ img.wp-post-image,
 		 	rgba(255,255,255, 0.7);
 		text-decoration: none;		
 	}
+
+	.main-navigation li span.menu-arrow {
+		display: none;
+	}
 }
+
 /* Custom, iPhone Retina */ 
 @media  (min-width : 320px) {
 	#footer-widget-middle {		
@@ -554,11 +563,67 @@ img.wp-post-image,
 		padding:2em;
 		margin:0;
 	}
+
 	.main-navigation.toggled ul > .current-menu-item > a, 
 	.main-navigation.toggled ul > .current_page_item > a {
+		background: none;
+	}
+	.main-navigation.toggled ul > li.current-menu-item, 
+	.main-navigation.toggled ul > li.current_page_item {
 		background: #292929;
-	}	
+	}
+	
+	.main-navigation.toggled li {
+		background: #3a3a3a;
+		display: block;
+		float: none;
+	}
+	.main-navigation.toggled li a{
+		display: inline-block;
+	}
+
+	.nav-menu .menu-item-has-children > a:after,
+	.nav-menu .page_item_has_children > a:after { //don't display inline arrow for mobile
+		content: ""; /* fa-chevron-down */
+	}
+
+	.main-navigation li span.menu-arrow {
+		display: inline-block;
+		color: #fff;
+		font-weight: bold;
+		line-height: 2;
+		padding: .5em 1em;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.main-navigation li span.menu-arrow {
+		&:hover {
+			background: #474747;
+		}
+	}
+
+	.main-navigation li span.menu-arrow-rotate {
+		display: inline-block;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.main-navigation.toggled li { //for hidden sub-menus
+		& .is-hidden {
+			display: none;
+		}
+	}
 }
+
 	/* Custom break for logo on header */
 @media (min-width: 432px) and (max-width: 782px) {
 	.site-branding a {
@@ -620,7 +685,8 @@ img.wp-post-image,
 	.main-navigation.toggled ul > .current-menu-item > a, 
 	.main-navigation.toggled ul > .current_page_item > a {
 		background: #292929;
-	}	
+	}
+
 }
 /* 12.0 Footer */
 /* 15.1 Minimum width of 770 pixels */
