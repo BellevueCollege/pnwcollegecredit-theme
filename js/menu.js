@@ -4,8 +4,8 @@
  * Handles toggling the navigation submenus for small screens
  */
 
-window.onload = function() {
-
+window.addEventListener('DOMContentLoaded', () => {
+    
     //Get all parent menus with children
     const parentHTMLCollection = document.getElementsByClassName('menu-item menu-item-has-children');
     const parentArray = Array.from(parentHTMLCollection);
@@ -43,4 +43,4 @@ window.onload = function() {
             childSubMenu.classList.toggle('is-hidden'); //toggles is-hidden class to display the sub-menu
         });
     }  
-};
+});
