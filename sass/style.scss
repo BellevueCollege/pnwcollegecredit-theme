@@ -1,11 +1,11 @@
-/*
+/*!
  Theme Name:   PNW College Credit (TinyFramework Child)
  Theme URI:    https://github.com/BellevueCollege/pnwcollegecredit-theme/
  Description:  Tiny Framework Child Theme for pnwcollegecredit.org
  Author:       Bellevue College ITS
  Author URI:   http://www.bellevuecollege.edu
  Template:     tiny-framework
- Version:      1
+ Version:      1.1
  GitHub Theme URI: bellevuecollege/pnwcollegecredit-theme
  License:      GNU General Public License v3
  License URI:  http://www.gnu.org/licenses/gpl-3.0.html
@@ -223,9 +223,13 @@ img.header-image {
 	top:0px;
 	margin: auto;
 }
-.main-navigation .current_page_item > a {
+
+.main-navigation li.current_page_item {
 	border-bottom: solid 3px 
 		rgba(255,255,255, 1);
+}
+
+.main-navigation li.current_page_item > a {
 	line-height: 2;
 	text-decoration: none;
 }
@@ -419,25 +423,35 @@ img.wp-post-image,
 		font-size: 1.2em;		
 		text-transform: none;
 	}
+	.main-navigation li a {
+		margin-top: .5em;
+		line-height: 2;
+	}
 	.main-navigation li ul li a {
 		background: #000;
+		margin-top: 0;
 	}
+
 	.main-navigation li a:hover, 
 	.main-navigation li, .main-navigation li,
 	.main-navigation li a:visited {
 		border-bottom: 0;
-		line-height:2;
 		text-decoration: none;		
 	}
+
 	.main-navigation li a:active,
 	.main-navigation li a:hover,
-	.main-navigation li a:focus {	
-		border-bottom: 3px solid
-			rgba(255,255,255, 0.7);
-		line-height:2;
+	.main-navigation li a:focus {
+		 border-bottom: 3px solid
+		 	rgba(255,255,255, 0.7);
 		text-decoration: none;		
 	}
+
+	.main-navigation li span.menu-arrow {
+		display: none;
+	}
 }
+
 /* Custom, iPhone Retina */ 
 @media  (min-width : 320px) {
 	#footer-widget-middle {		
@@ -549,14 +563,71 @@ img.wp-post-image,
 		padding:2em;
 		margin:0;
 	}
+
 	.main-navigation.toggled ul > .current-menu-item > a, 
 	.main-navigation.toggled ul > .current_page_item > a {
+		background: none;
+	}
+	.main-navigation.toggled ul > li.current-menu-item, 
+	.main-navigation.toggled ul > li.current_page_item {
 		background: #292929;
-	}	
+	}
+	
+	.main-navigation.toggled li {
+		background: #3a3a3a;
+		display: block;
+		float: none;
+	}
+	.main-navigation.toggled li a{
+		display: inline-block;
+	}
+
+	.nav-menu .menu-item-has-children > a:after,
+	.nav-menu .page_item_has_children > a:after { //don't display inline arrow for mobile
+		content: ""; /* fa-chevron-down */
+	}
+
+	.main-navigation li span.menu-arrow {
+		float: right;
+		color: #fff;
+		font-weight: bold;
+		line-height: 2;
+		padding: .5em 1em;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			background: #474747;
+		}
+	}
+
+	.main-navigation li span.menu-arrow-rotate {
+		display: inline-block;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.main-navigation.toggled li { //for hidden sub-menus
+		& .is-hidden {
+			display: none;
+		}
+	}
+
+	.main-navigation.toggled ul.nav-menu, 
+	.main-navigation.toggled div.nav-menu>ul.li {
+		text-align: left;
+	}
 }
+
 	/* Custom break for logo on header */
 @media (min-width: 432px) and (max-width: 782px) {
-	.site-branding a, {
+	.site-branding a {
 		text-align: center;
 	 }
 }
@@ -615,7 +686,8 @@ img.wp-post-image,
 	.main-navigation.toggled ul > .current-menu-item > a, 
 	.main-navigation.toggled ul > .current_page_item > a {
 		background: #292929;
-	}	
+	}
+
 }
 /* 12.0 Footer */
 /* 15.1 Minimum width of 770 pixels */
