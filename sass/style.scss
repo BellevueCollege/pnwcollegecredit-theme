@@ -20,6 +20,28 @@ $width: calc(100% - 6em);
 $width-sm: calc(100% - 1em);
 
 /*
+ * Parent Overrides
+ */
+
+blockquote {
+	color: #000;
+
+}
+
+/* Tip21 - Icon webfont support implementation and examples */
+blockquote p:first-child:before {
+	color: #003d79;
+
+}
+
+/**
+ Block Styles
+ */
+.wp-block-column {
+	padding: 1.25rem;
+}
+
+/*
  * Out of the box 'switches'
  *
  * Options provided by Tiny Framework to modify display and functionality.
