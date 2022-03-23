@@ -10,16 +10,17 @@
     "not dead"
   ],
   "dependencies": {
-    "natives": "^1.1.6"
+    "graceful-fs": "^4.2.9",
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "flexboxgrid": "^6.3.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "~4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "uglify-save-license": "^0.4.1"
   },
   "scripts": {
