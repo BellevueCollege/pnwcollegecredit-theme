@@ -5,7 +5,7 @@
  Author:       Bellevue College ITS
  Author URI:   http://www.bellevuecollege.edu
  Template:     tiny-framework
- Version:      1.1
+ Version:      1.1.1
  GitHub Theme URI: bellevuecollege/pnwcollegecredit-theme
  License:      GNU General Public License v3
  License URI:  http://www.gnu.org/licenses/gpl-3.0.html
@@ -276,21 +276,7 @@ img.wp-post-image,
 	border-radius: 0;
 	box-shadow: none;
 }
-/* Add leaf to headers with links attributes */
-.entry-content h2 {
-	color: #fff;
-	/* background: #292929 url("img/leaf.jpg") center right no-repeat; */
-	background: #292929;
-	padding: .125em 1.5em .25em .75em;	
 
-	a:visited,
-	a {
-		color: #fff;
-	}
-	a:hover {
-		color: #539241;
-	}
-}
  /* Footer widgets styling and center for mobile display */
 #footer-widgets li {
 	text-decoration: none;
@@ -723,3 +709,8 @@ img.wp-post-image,
 	}
 }
 /** End Media Queries **/
+
+/** WordPress Block Styles **/
+.wp-block-column {
+	padding: 1.25rem;
+}
