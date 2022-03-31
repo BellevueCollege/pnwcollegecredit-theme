@@ -5,7 +5,7 @@
  Author:       Bellevue College ITS
  Author URI:   http://www.bellevuecollege.edu
  Template:     tiny-framework
- Version:      1.1.1
+ Version:      1.1.2
  GitHub Theme URI: bellevuecollege/pnwcollegecredit-theme
  License:      GNU General Public License v3
  License URI:  http://www.gnu.org/licenses/gpl-3.0.html
@@ -255,6 +255,23 @@ img.header-image {
 	line-height: 2;
 	text-decoration: none;
 }
+
+.entry-content {
+	 h2, h3, h4, h5, h6 {
+		color: #fff;
+		background: #292929;
+		padding: .125em 1.5em .25em .75em;
+
+		a:visited,
+		a {
+			color: #fff;
+		}
+		a:hover {
+			color: #539241;
+		}
+	}
+}
+
 .main-navigation ul.nav-menu,
 .main-navigation div.nav-menu > ul.li {
 	text-align: center;
